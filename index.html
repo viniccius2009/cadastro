@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>
+        Cadastro
+    </h1>
+    <div class="container">
+        <form action="register.php" method="post" onsubmit="return validarsenha()">
+            <h2>Dados Pessoais</h2>
+            <input type="text" name="nome" placeholder="Nome do usuário" required>
+            <input type="text" name="cpf" placeholder="CPF" required maxlength="11" minlength="11">
+            <input type="date" name="nascimento" placeholder="Data de nascimento" required>
+            <label>
+                genero fisiologico
+           </label>
+           <select name="genero" required>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+
+            <h2>Endereço</h2>
+            <input type="text" name="endereco" placeholder="Endereço" required>
+            <input type="text" name="cep" placeholder="CEP" required maxlength="8" minlength="8">
+            <input type="text" name="cidade" placeholder="Cidade" required>
+            <input type="text" name="bairro" placeholder="Bairro" required>
+
+            <h2>Contato</h2>
+            <input type="tel" name="telefone" placeholder="Telefone" required maxlength="15">
+            <input type="email" name="email_c" placeholder="Email de contato" required>
+
+            <h2>Acesso</h2>
+            <input type="email" name="email_l" placeholder="Email de login" required>
+            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            <input type="password" id="senha_c" name="senha_c" placeholder="Confirmar senha" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
