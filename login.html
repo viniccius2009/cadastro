@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>
+        Login
+    </h1>
+    <div class="container">
+          <form action="register.php" method="post" onsubmit="return validarsenha()">
+            <input type="email" name="email_l" placeholder="Email de login" required>
+            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            <input type="password" id="senha_c" name="senha_c" placeholder="Confirmar senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>
