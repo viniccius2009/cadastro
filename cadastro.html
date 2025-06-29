@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function validarSenha() {
+      const senha = document.getElementById("senha").value;
+      const confirmar = document.getElementById("senha_c").value;
+      if (senha !== confirmar) {
+        alert("As senhas não coincidem.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro</h1>
+    <form action="cadastro.php" method="post" onsubmit="return validarSenha()">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" id="senha" name="senha" placeholder="Senha" required>
+      <input type="password" id="senha_c" placeholder="Confirmar senha" required>
+      <button type="submit" class="btn">Cadastrar</button>
+    </form>
+  </div>
+</body>
+</html>
